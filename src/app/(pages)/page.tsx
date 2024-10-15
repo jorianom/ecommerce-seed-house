@@ -1,4 +1,5 @@
 import { Products } from "@/src/components/ads/Products";
+import { CardProduct } from '@/src/components/products/CardProduct';
 
 
 const categories = [
@@ -33,6 +34,7 @@ export default function Home() {
     <main className="">
       <Products label="Categorias Populares" list={categories} />
       <Products label="Productos Populares" list={categories} />
+      <CardProduct />
     </main>
   );
 }

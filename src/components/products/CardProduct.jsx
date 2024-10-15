@@ -1,6 +1,5 @@
-import React from "react";
 
-const CardProduct = () => {
+export const CardProduct = () => {
   return (
     <div class="flex flex-col rounded-2xl w-96 bg-[#ffffff] shadow-xl">
       <figure class="flex justify-center items-center rounded-2xl">
@@ -50,13 +49,11 @@ const CardProduct = () => {
           </div>
         </div>
         <font className="mt-4 ">
-            <font className="text-[#374151] text-sm/3">
-              Disponible 2 días después de tu compra
-            </font>
+          <font className="text-[#374151] text-sm/3">
+            Disponible 2 días después de tu compra
           </font>
+        </font>
       </div>
     </div>
   );
 };
-
-export default CardProduct;
