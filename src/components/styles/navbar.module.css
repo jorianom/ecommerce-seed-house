@@ -1,0 +1,15 @@
+.link {
+	@apply mr-2 transition-all rounded-md;
+}
+
+.linkActive {
+	@apply text-white;
+}
+
+.linkHover {
+	@apply hover:bg-primary hover:text-white hover:font-bold;
+}
+
+.linkIcon .iconL {
+	@apply hover:transition-all ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:text-white duration-200 text-black;
+}
