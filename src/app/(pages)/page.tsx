@@ -1,31 +1,37 @@
 import { Products } from "@/src/components/ads/Products";
-import { CardProduct } from '@/src/components/products/CardProduct';
-
 
 const categories = [
   {
-    name: "Flores",
-    image: "/resources/images/semilla.jpg"
-  },
-  {
     name: "Frutas",
-    image: "/resources/images/semilla.jpg"
+    image: "/resources/images/semilla.jpg",
+    titleProduct: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras"
   },
+
   {
-    name: "Hortalizas",
-    image: "/resources/images/semilla.jpg"
-  },
-  {
-    name: "Plantas",
-    image: "/resources/images/flor.jpg"
-  },
-  {
-    name: "Semillas",
-    image: "/resources/images/flor.jpg"
+    name: "Árboles",
+    image: "/resources/images/flor.jpg",
+    titleProduct: "Unas matas ahí"
   },
   {
     name: "Árboles",
-    image: "/resources/images/flor.jpg"
+    image: "/resources/images/flor.jpg",
+    titleProduct: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores commodi sequi itaque sed aut qui modi obcaecati dolore, cumque neque animi expedita est cupiditate, reiciendis necessitatibus non at accusamus praesentium."
+  },
+  {
+    name: "Frutas",
+    image: "/resources/images/semilla.jpg",
+    titleProduct: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras"
+  },
+
+  {
+    name: "Árboles",
+    image: "/resources/images/flor.jpg",
+    titleProduct: "Unas matas ahí"
+  },
+  {
+    name: "Árboles",
+    image: "/resources/images/flor.jpg",
+    titleProduct: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores commodi sequi itaque sed aut qui modi obcaecati dolore, cumque neque animi expedita est cupiditate, reiciendis necessitatibus non at accusamus praesentium."
   }
 ]
 
@@ -34,7 +40,6 @@ export default function Home() {
     <main className="">
       <Products label="Categorias Populares" list={categories} />
       <Products label="Productos Populares" list={categories} />
-      <CardProduct />
     </main>
   );
 }
