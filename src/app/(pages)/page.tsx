@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <main className="">
       <Products label="Categorias Populares" list={categories} />
-      <Products label="Productos Populares" list={categories} />
+      {/* <Products label="Productos Populares" list={categories} /> */}
     </main>
   );
 }

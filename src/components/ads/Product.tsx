@@ -1,4 +1,4 @@
-//import Image from "next/image"
+import Image from "next/image"
 import { CardProduct } from "../products/CardProduct"
 
 interface ProductProps {
@@ -9,7 +9,7 @@ interface ProductProps {
 
 export const Product = ({ name, image, titleProduct }: ProductProps) => {
     return (
-        <CardProduct alt={name} srcImg={image} titleP={titleProduct}/>
+        <CardProduct alt={name} srcImg={image} titleP={titleProduct} />
 
     )
 }
