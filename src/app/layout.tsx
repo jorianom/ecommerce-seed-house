@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/src/components/navbar/Navbar";
 
 import { titleFont } from "./fonts/fonts";
+import { Footer } from "../components/footer/Footer";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -27,6 +28,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
       <body className={`${titleFont.className} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
