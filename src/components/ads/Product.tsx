@@ -3,13 +3,13 @@ import { CardProduct } from "../products/CardProduct"
 
 interface ProductProps {
     name: string,
-    image: string
+    image: string,
+    titleProduct: string
 }
 
-export const Product = ({ name, image }: ProductProps) => {
+export const Product = ({ name, image, titleProduct }: ProductProps) => {
     return (
-        // <Image src={image} width={200} height={200} alt={name}>
-        // </Image>
-        <CardProduct />
+        <CardProduct alt={name} srcImg={image} titleP={titleProduct} />
+
     )
 }
