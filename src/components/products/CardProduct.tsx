@@ -14,7 +14,7 @@ export const CardProduct = ({ alt, srcImg, titleP }: CardProps) => {
         <Image width={100} height={100}
         src= {srcImg}
         alt={alt}
-        className="rounded-t-2xl w-full h-full object-cover"></Image>
+        className="rounded-t-2xl aspect-square w-full h-full object-cover"></Image>
       </figure>
       <div className="flex-col p-8">
         <div className="text-sm/loose text-[#374151] h-14 text-wrap truncate">
