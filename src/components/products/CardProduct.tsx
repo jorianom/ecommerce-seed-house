@@ -10,11 +10,11 @@ interface CardProps {
 export const CardProduct = ({ alt, srcImg, titleP }: CardProps) => {
   return (
     <div className="flex flex-col w-full bg-[#ffffff] shadow-xl rounded-2xl">
-      <figure className="aspect-w-1 w-full rounded-2xl bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-        <Image width={500} height={500}
+      <figure className="aspect-square rounded-2xl bg-gray-200 group-hover:opacity-75">
+        <Image width={100} height={100}
         src= {srcImg}
         alt={alt}
-        className="rounded-t-2xl w-full h-80 object-cover"></Image>
+        className="rounded-t-2xl w-full h-full object-cover"></Image>
       </figure>
       <div className="flex-col p-8">
         <div className="text-sm/loose text-[#374151] h-14 text-wrap truncate">
