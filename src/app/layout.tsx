@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/src/components/navbar/Navbar";
 
-import { titleFont } from "./fonts/fonts";
+import { titleFont } from "../fonts/fonts";
 import { Footer } from "../components/footer/Footer";
 
 // const geistSans = localFont({

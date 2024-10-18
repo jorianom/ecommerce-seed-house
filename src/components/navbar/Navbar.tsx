@@ -21,7 +21,7 @@ const navIcons = [
 
 export default function Navbar() {
     return (
-        <nav className="flex px-5 py-5 justify-between items-center w-full bg-softprimary">
+        <nav className="flex px-5 py-5 justify-between items-center w-full bg-primary text-white">
             <div>
                 <Link href="/" className="flex items-center">
                     <HomeIcon className="mr-2 w-5 h-5" />
