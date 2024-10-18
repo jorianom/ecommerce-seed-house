@@ -10,9 +10,9 @@ const navItems = [
     { href: "/products", label: "Macetas" },
 ]
 const navOpt = [
-    { href: "/products", label: "Ofertas", className: "bg-danger hover:bg-red-600 text-white py-2 px-4 rounded-full" },
-    { href: "/products", label: "Lo mas vendido", className: "bg-primary hover:bg-hardprimary text-white py-2 px-4 rounded-md" },
-    { href: "/products", label: "Lo mas buscado", className: "bg-warning hover:bg-orange-600 text-white py-2 px-4 rounded-md" }
+    { href: "/products", label: "Ofertas", className: "bg-danger hover:bg-red-600 text-white py-2 px-4 rounded-full  text-center" },
+    { href: "/products", label: "Lo mas vendido", className: "bg-primary hover:bg-hardprimary text-white py-2 px-4 rounded-md  text-center" },
+    { href: "/products", label: "Lo mas buscado", className: "bg-warning hover:bg-orange-600 text-white py-2 px-4 rounded-md  text-center" }
 ]
 
 export const NavbarCategories = () => {
