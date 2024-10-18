@@ -14,7 +14,7 @@ const stats = [
 
 export const AboutComponent = () => {
     return (
-        <div className="min-h-screen bg-white py-12">
+        <div className="min-h-screen bg-white m-5">
             {/* Encabezado */}
             <section className="bg-softprimary border py-16 shadow-md">
                 <div className="container mx-auto px-4">

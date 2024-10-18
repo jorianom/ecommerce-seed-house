@@ -3,11 +3,11 @@
 }
 
 .linkActive {
-	@apply text-white;
+	@apply text-white font-bold;
 }
 
 .linkHover {
-	@apply hover:bg-primary hover:text-white hover:font-bold;
+	@apply hover:bg-primary hover:text-white hover:font-bold hover:rounded-md;
 }
 
 .linkIcon .iconL {
