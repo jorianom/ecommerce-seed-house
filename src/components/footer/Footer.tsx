@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa6"
 
 export const Footer = () => {
     return (
-        <footer className="bg-primary text-white py-4">
+        <footer className="bg-primary text-white py-4 md:px-4">
             <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
                 <div className="text-sm text-center sm:text-left">
                     <p className="mb-2">© 2024 LA CASA DE LAS SEMILLAS. <br />

@@ -3,7 +3,7 @@ import { Product } from "./Product"
 
 interface ProductsProps {
     label: string,
-    list: { name: string, image: string, titleProduct:string }[]
+    list: { id: number, name: string, image: string, titleProduct: string }[]
 }
 
 export const Products = ({ label, list }: ProductsProps) => {
@@ -16,7 +16,7 @@ export const Products = ({ label, list }: ProductsProps) => {
                 </Image>
             </div> */}
                 {list.map((item) => (
-                    <div key={item.name} className="flex items-center justify-center p-5 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200">
+                    <div key={item.id} className="flex items-center justify-center p-5 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200">
                         <Product name={item.name} image={item.image} titleProduct={item.titleProduct} />
                     </div>
                 ))}
