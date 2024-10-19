@@ -33,7 +33,7 @@ export const CardProduct = ({ alt, srcImg, titleP }: CardProps) => {
           </div>
           </div>
           <div className="flex justify-end w-full">
-            <button className="bg-[#16a34a] text-[#ffffff] font-bold text-base p-2 rounded-lg hover:bg-[#15803d] active:scale-95 transition-transform transform">
+            <button className="bg-primary text-[#ffffff] font-bold text-base p-2 rounded-lg hover:bg-hardprimary active:scale-95 transition-transform transform">
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

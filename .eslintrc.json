@@ -1,3 +1,8 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals",
+  "next/typescript",
+  "airbn-typescript/base",
+  "plugin:prettier/recommended"
+],
+"plugins": ["react","@typescript-eslint","prettier"]
 }
