@@ -52,7 +52,7 @@ const categories = [
 export default function ProductPage() {
     return (
         <main className="">
-            <p className="flex h-10 items-center justify-center bg-softprimary px-4 text-sm font-bold sm:px-6 lg:px-8">Obten envio gratis por compras superiores a $100</p>
+            <p className="flex h-10 items-center justify-center text-center bg-softprimary px-4 text-sm font-bold sm:px-6 lg:px-8">Obten envio gratis por compras superiores a $100</p>
             <NavbarCategories />
             <Products label="Categorias Populares" list={categories} />
         </main>
