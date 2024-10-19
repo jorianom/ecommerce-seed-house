@@ -37,7 +37,7 @@ export const Summary = () => {
     const total = subtotal + shippingCost + tax
 
     return (
-        <div className="bg-softprimary shadow-lg rounded-lg p-6 m-4 max-w-lg mx-auto">
+        <div className="bg-softprimary shadow-lg rounded-lg p-6 mx-5 my-4 sm:my:0 w-full sm:w-5/6 flex-shrink-0">
             <h2 className="text-2xl font-bold mb-4">Resumen de Pedido</h2>
             <div className="divide-y divide-gray-200">
                 {

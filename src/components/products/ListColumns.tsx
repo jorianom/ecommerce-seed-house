@@ -28,7 +28,7 @@ export const ListColumns = ({ items, n }: ColumnListProps) => {
                 <ul key={colIndex} className="flex flex-col">
                     {column.map((item, itemIndex) => (
                         <li key={itemIndex} className="py-1">
-                            <Link href={item.href} className={`px-2 ${style.linkHover}`}>
+                            <Link href={item.href} className={`px-1 ${style.linkHover}`}>
                                 {item.label}
                             </Link>
                         </li>

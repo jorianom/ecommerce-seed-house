@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 export const AboutComponent = () => {
     return (
@@ -8,6 +9,7 @@ export const AboutComponent = () => {
                     <p className="mt-6 text-lg leading-8 text-gray-600">
                         En La Casa de las Semilla, nos apasiona llevar a cada hogar los mejores productos agrícolas para sembrar un futuro más saludable y sostenible.
                     </p>
+                    <Image src="/resources/images/fondo.jpg" alt="Sobre Nosotros" width={800} height={500} className="rounded-lg mt-6" />
                 </div>
             </section>
             <section className="bg-softprimary md:mx-4 border border-green-300 py-16 shadow-md">
