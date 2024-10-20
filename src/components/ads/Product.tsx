@@ -9,7 +9,9 @@ interface ProductProps {
 
 export const Product = ({ name, image, titleProduct }: ProductProps) => {
     return (
-        <CardProduct alt={name} srcImg={image} titleP={titleProduct} />
 
+        // <div className="flex items-center justify-center space-x-4" >
+        <CardProduct alt={name} srcImg={image} titleP={titleProduct} />
+        // </div >
     )
 }
