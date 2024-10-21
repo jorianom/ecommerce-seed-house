@@ -35,9 +35,9 @@ export const CartProduct = () => {
     }
 
     return (
-        <>
-            {cart.map((item) => (
-                <div className={`flex flex-col items-center divide-y divide-dashed divide-green-300 w-full max-h-[500px] overflow-y-auto ${style.hideScrollbar}`}>
+        <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center">
+            <div className={`flex flex-col items-center divide-y divide-dashed divide-green-300 w-full max-h-[500px] overflow-y-auto ${style.hideScrollbar}`}>
+                {cart.map((item) => (
                     <div key={item.id} className="flex space-x-4 p-4">
                         <div className="aspect-square w-full min-w-40 rounded-2xl lg:aspect-none group-hover:opacity-75 relative overflow-hidden ">
                             <Image
@@ -73,12 +73,12 @@ export const CartProduct = () => {
                             </button>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
             <div className="flex items-center justify-center w-full">
                 <Summary total={totalPrice} />
             </div>
-        </>
+        </div>
 
     )
 }

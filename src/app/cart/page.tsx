@@ -8,9 +8,9 @@ export const Cart = () => {
         <>
             <h2 className="text-2xl font-bold text-left m-4">Tu Carrito </h2>
             <hr className="bg-primary h-px" />
-            <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center">
-                <CartProduct />
-            </div>
+            {/* <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center"> */}
+            <CartProduct />
+            {/* </div> */}
         </>
     )
 }
