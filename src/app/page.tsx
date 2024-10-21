@@ -29,7 +29,7 @@ const categories = [
     name: "Árboles",
     image: "/resources/images/flor.jpg",
     titleProduct: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores commodi sequi itaque sed aut qui modi obcaecati dolore, cumque neque animi expedita est cupiditate, reiciendis necessitatibus non at accusamus praesentium.",
-    price: 100000,
+    price: 1000000,
     discount: "-20%"
   },
   {

@@ -1,3 +1,4 @@
+import { formattedNumber } from "@/src/utils/format";
 
 interface ItemsSummaryProps {
     label: string;
@@ -5,36 +6,40 @@ interface ItemsSummaryProps {
 }
 
 const ItemsSummary = ({ label, amount }: ItemsSummaryProps) => {
+
     return (
         <>
             <div className="flex justify-between items-center py-2">
                 <span className="text-lg">{label}</span>
-                <span className="text-lg font-bold">${amount}</span>
+                <span className="text-lg font-bold">$ {formattedNumber(amount, 1)}</span>
             </div>
         </>
     )
 
 }
-const items = [
-    {
-        label: "Subtotal",
-        amount: 100
-    },
-    {
-        label: "Envío Aproximado",
-        amount: 10
-    },
-    {
-        label: "Impuestos",
-        amount: 10
-    }
-]
+interface SummaryProps {
+    total: number;
+}
 
-export const Summary = () => {
-    const subtotal = 100
-    const shippingCost = 10
-    const tax = 10
-    const total = subtotal + shippingCost + tax
+export const Summary = ({ total }: SummaryProps) => {
+    const shippingCost = 100
+    const tax = total * 0.19
+    total = total + shippingCost
+    const subtotal = total - tax - shippingCost
+    const items = [
+        {
+            label: "Subtotal",
+            amount: subtotal
+        },
+        {
+            label: "Impuestos",
+            amount: tax
+        },
+        {
+            label: "Envío Aproximado",
+            amount: shippingCost
+        }
+    ]
 
     return (
         <div className="bg-softprimary shadow-lg rounded-lg p-6 mx-5 my-4 sm:my:0 w-full sm:w-5/6 flex-shrink-0">
@@ -47,7 +52,7 @@ export const Summary = () => {
                 }
                 <div className="flex justify-between items-center pt-4">
                     <span className="text-lg font-semibold">Total:</span>
-                    <span className="text-xl font-bold">${total.toFixed(2)}</span>
+                    <span className="text-xl font-bold">$ {formattedNumber(total, 1)}</span>
                 </div>
             </div>
             <div className="mt-6 text-center">
