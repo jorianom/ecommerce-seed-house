@@ -1,18 +1,13 @@
+import { CartItem } from '@/src/interfaces';
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-interface CartItem {
-    id: number;
-    name: string;
-    price: number;
-    quantity: number;
-    imagen: string;
-}
 
 interface State {
     cart: CartItem[];
     addCart: (item: CartItem) => void;
     getTotalItems: () => number;
+    updateQuantity: (id: number, quantity: number) => void;
 }
 
 export const useCartStore = create<State>()(
@@ -37,7 +32,17 @@ export const useCartStore = create<State>()(
             getTotalItems: () => {
                 const { cart } = get();
                 return cart.reduce((acc, item) => acc + item.quantity, 0);
+            },
+            updateQuantity: (id: number, quantity: number) => {
+                const { cart } = get();
+                const updateCart = cart.map((i) => {
+                    if (i.id === id) {
+                        return { ...i, quantity: quantity + i.quantity };
+                    }
+                    return i;
+                });
+                set({ cart: updateCart });
             }
         }),
-        { name: 'cart-storage', skipHydration: true })
+        { name: 'cart-storage' })
 )

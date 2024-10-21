@@ -1,23 +1,37 @@
 'use client'
+import { CartItem } from "@/src/interfaces"
 import { useCartStore } from "@/src/store/cart/cart"
 import Image from "next/image"
+import { useEffect, useState } from "react"
 import { FiMinus } from "react-icons/fi"
 import { RiAddFill, RiDeleteBin7Line } from "react-icons/ri"
 
-interface CartProductProps {
-    name: string,
-    description: string,
-    price: number,
-    quantity: number,
-    image: string
-}
-
 export const CartProduct = () => {
     const cart = useCartStore((state) => state.cart)
+    const updateQuantity = useCartStore((state) => state.updateQuantity)
+    const [loaded, setLoaded] = useState(false)
+
+    const handleUpdateQuantity = (item: CartItem, quantity: number) => {
+        if (item.quantity + quantity < 1) {
+            return
+        }
+        updateQuantity(item.id, quantity)
+    }
+
+    useEffect(() => {
+        setLoaded(true)
+    }, [])
+
+    if (!loaded) {
+        return <h2 className="text-2xl font-bold text-left m-4">Cargando...</h2>
+    }
+    if (cart.length === 0) {
+        return <h2 className="text-2xl font-bold text-left m-4">Tu carrito está vacío</h2>
+    }
+
     return (
         <>
             {cart.map((item) => (
-
                 <div key={item.id} className="flex space-x-4 p-4">
                     <div className="aspect-square w-full min-w-40 rounded-2xl lg:aspect-none group-hover:opacity-75 relative overflow-hidden ">
                         <Image
@@ -37,11 +51,11 @@ export const CartProduct = () => {
                         <div className="flex flex-col items-end mt-auto">
                             <span className="text-lg">Precio: ${item.price}</span>
                             <div className="space-x-2">
-                                <button className="bg-primary w-6 h-6 rounded-sm font-bold">
+                                <button onClick={() => handleUpdateQuantity(item, -1)} className="bg-primary w-6 h-6 rounded-sm font-bold">
                                     <FiMinus className="inline w-6 h-6" />
                                 </button>
                                 <span>{item.quantity}</span>
-                                <button className="bg-primary rounded-sm">
+                                <button onClick={() => handleUpdateQuantity(item, 1)} className="bg-primary rounded-sm">
                                     <RiAddFill className="inline w-6 h-6" />
                                 </button>
                             </div>
