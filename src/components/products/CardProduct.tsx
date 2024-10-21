@@ -1,42 +1,43 @@
 import Image from "next/image";
-import { HiOutlineShoppingBag } from "react-icons/hi";
+import { CartButton } from "../cart/CartButton";
+import { Product } from "@/src/interfaces";
 
-interface CardProps {
-  alt: string,
-  srcImg: string,
-  titleP: string
+interface CardProductProps {
+  item: Product;
 }
 
-
-export const CardProduct = ({ alt, srcImg, titleP }: CardProps) => {
+export const CardProduct = ({ item }: CardProductProps) => {
   return (
     <div className="flex flex-col w-full bg-white shadow-md rounded-2xl">
       <div className="aspect-square w-full rounded-2xl lg:aspect-none group-hover:opacity-75 relative overflow-hidden ">
         <Image
-          src={srcImg}
-          alt={alt}
+          src={item.image}
+          alt={item.alt}
           className="rounded-t-2xl w-full object-cover p-1"
-          layout="fill"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
         />
       </div>
       <div className="flex-col p-4">
         <div className="text-sm/loose h-14 text-wrap truncate">
           <span className="text-clip">
-            {titleP}
+            {item.titleProduct}
           </span>
         </div>
         <div className="flex flex-col lg:flex-row mt-2 lg:space-x-2 w-full max-w-lg mx-auto">
           <div className="relative flex justify-center items-center w-full">
             <span className="text-xl md:text-2xl font-bold lg:text-left text-gray-800">$100.000</span>
-            <span className="ml-1 bg-danger text-white px-2 rounded-full text-sm md:text-base">
-              -20%
-            </span>
+            {
+              // <span className="text-sm/3 font-bold text-gray-500 line-through lg:text-left">{item.discount}</span>
+              item.discount && (
+                <span className="ml-1 bg-danger text-white px-2 rounded-full text-sm md:text-base">
+                  {item.discount ? item.discount : "0%"}
+                </span>
+              )
+            }
           </div>
-          <div className="flex justify-end p-2 md:p-0 text-center">
-            <button className="flex justify-center items-center bg-primary font-bold p-1 sm:p-2 rounded-lg hover:bg-hardprimary w-full text-center">
-              <HiOutlineShoppingBag className="w-6 h-6" color="white" />
-            </button>
-          </div>
+          <CartButton item={item} />
         </div>
 
         <span className="hidden md:block text-sm/3 mt-4 ">
