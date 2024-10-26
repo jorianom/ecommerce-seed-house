@@ -31,12 +31,15 @@ export const CartProduct = () => {
         return <h2 className="text-2xl font-bold text-left m-4">Cargando...</h2>
     }
     if (cart.length === 0) {
-        return <h2 className="text-2xl font-bold text-left m-4">Tu carrito está vacío</h2>
+        return (
+            <div className="flex min-h-screen items-center justify-center">
+                <h2 className="text-2xl font-bold text-left m-4">Tu carrito está vacío</h2>
+            </div>)
     }
 
     return (
         <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center">
-            <div className={`flex flex-col items-center divide-y divide-dashed divide-green-300 w-full max-h-[500px] overflow-y-auto ${style.hideScrollbar}`}>
+            <div className={`flex flex-col items-center divide-y divide-dashed divide-green-300 w-full max-h-[500px] overflow-y-auto ${style.carScrollbar}`}>
                 {cart.map((item) => (
                     <div key={item.id} className="flex space-x-4 p-4">
                         <div className="aspect-square w-full min-w-40 rounded-2xl lg:aspect-none group-hover:opacity-75 relative overflow-hidden ">

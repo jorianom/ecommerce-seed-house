@@ -4,6 +4,7 @@ import style from "../styles/navbar.module.css";
 interface Item {
     href: string;
     label: string;
+    slug: string;
 }
 
 interface ColumnListProps {
@@ -24,11 +25,11 @@ export const ListColumns = ({ items, n }: ColumnListProps) => {
     const columns = splitIntoColumns(items, n);
     return (
         <>
-            {columns.map((column, colIndex) => (
-                <ul key={colIndex} className="flex flex-col">
-                    {column.map((item, itemIndex) => (
-                        <li key={itemIndex} className="py-1">
-                            <Link href={item.href} className={`px-1 ${style.linkHover}`}>
+            {columns.map((column) => (
+                <ul key={column[0].href} className="flex flex-col">
+                    {column.map((item) => (
+                        <li key={item.href} className="py-1">
+                            <Link href={`/products/${item.slug}`} className={`px-1 ${style.linkHover}`}>
                                 {item.label}
                             </Link>
                         </li>

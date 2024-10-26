@@ -28,7 +28,7 @@ export const CardProduct = ({ item }: CardProductProps) => {
         </div>
         <div className="flex flex-col lg:flex-row mt-2 lg:space-x-2 w-full max-w-lg mx-auto">
           <div className="relative flex justify-center items-center w-full">
-            <span className="text-xl md:text-2xl font-bold lg:text-left text-gray-800">${formattedNumber(item.price, 0)}</span>
+            <span className="text-lg md:text-2xl font-bold lg:text-left text-gray-800">${formattedNumber(item.price, 0)}</span>
             {
               // <span className="text-sm/3 font-bold text-gray-500 line-through lg:text-left">{item.discount}</span>
               item.discount && (

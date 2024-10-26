@@ -1,4 +1,4 @@
-.hideScrollbar {
+.carScrollbar {
 	/* -ms-overflow-style: none; */
 	scrollbar-width: thin; /* Scrollbar más delgado */
 	scrollbar-color: #00b207 #f1f1f1; /* Color del scroll y del fondo */
