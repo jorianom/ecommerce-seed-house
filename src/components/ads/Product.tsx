@@ -1,15 +1,15 @@
 
-interface ProductProps {
-    name: string,
-    image: string,
-    titleProduct: string
-}
+// interface ProductProps {
+//     name: string,
+//     image: string,
+//     titleProduct: string
+// }
 
-export const Product = ({ name, image, titleProduct }: ProductProps) => {
-    return (
-        <></>
-        // <div className="flex items-center justify-center space-x-4" >
-        // <CardProduct item={{..item }} />
-        // </div >
-    )
-}
+// export const Product = ({ name, image, titleProduct }: ProductProps) => {
+//     return (
+//         <></>
+//         // <div className="flex items-center justify-center space-x-4" >
+//         // <CardProduct item={{..item }} />
+//         // </div >
+//     )
+// }

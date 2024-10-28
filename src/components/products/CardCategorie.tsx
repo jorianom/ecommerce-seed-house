@@ -23,7 +23,7 @@ export const CardCategorie = ({ item }: CardCategorieProps) => {
 
     useEffect(() => {
         let animationFrameId: number;
-        let scrollSpeed = 1; // Velocidad de desplazamiento
+        const scrollSpeed = 1; // Velocidad de desplazamiento
         const moveScroll = () => {
             if (scrollContainerRef.current && !isPaused) {
                 const scrollContainer = scrollContainerRef.current;
