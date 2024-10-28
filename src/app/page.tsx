@@ -1,6 +1,6 @@
 import { Products } from "@/src/components/ads/Products";
 import { CardCategorie } from "../components/products/CardCategorie";
-import { products } from "./products/page";
+import { products } from "../interfaces";
 
 
 

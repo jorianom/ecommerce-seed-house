@@ -1,5 +1,5 @@
 import { Products } from '@/src/components/ads/Products'
-import { products } from '../page';
+import { products } from '@/src/interfaces';
 import { notFound } from 'next/navigation';
 
 interface PageProps {

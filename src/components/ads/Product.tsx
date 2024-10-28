@@ -1,5 +1,3 @@
-import Image from "next/image"
-import { CardProduct } from "../products/CardProduct"
 
 interface ProductProps {
     name: string,

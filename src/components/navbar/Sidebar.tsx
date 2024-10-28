@@ -1,25 +1,10 @@
 'use client'
-import { BsCart4, BsSearch } from "react-icons/bs"
-import { CiMenuFries } from "react-icons/ci"
-import { IoClose, IoLogOutOutline, IoPeopleOutline, IoShirtOutline, IoTicketOutline } from "react-icons/io5"
+import { IoClose } from "react-icons/io5"
 import Link from "next/link"
 import { useUIStore } from "@/src/store/ui/ui"
-import { HomeIcon } from "@primer/octicons-react"
 import { FaBoxes } from "react-icons/fa"
-import { FcAbout } from "react-icons/fc"
 import { MdModeComment } from "react-icons/md"
 
-const navItems = [
-    { href: "/about", label: "¿Quienes Somos?" },
-    { href: "/products", label: "Productos" },
-    { href: "/contact", label: "Contacto" },
-]
-
-const navIcons = [
-    { href: "/example", label: <BsSearch className={`iconL w-5 h-5`} /> },
-    { href: "/cart", label: <BsCart4 className={`iconL w-5 h-5`} />, span: true },
-    { href: "/", label: <CiMenuFries className={`iconL w-5 h-5`} /> },
-]
 
 export const Sidebar = () => {
     const isOpen = useUIStore(state => state.isOpen)

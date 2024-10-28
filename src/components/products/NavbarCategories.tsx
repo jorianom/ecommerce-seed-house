@@ -27,7 +27,7 @@ export const NavbarCategories = () => {
             </div>
             <div className='p-4 flex items-center'>
                 {
-                    navOpt.map((item, index) => (
+                    navOpt.map((item) => (
                         <Link key={item.id} href={item.href} className={`mx-2 ${item.className}`}>{item.label}</Link>
                     ))
                 }
