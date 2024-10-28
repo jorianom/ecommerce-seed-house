@@ -1,3 +1,5 @@
+import { Products } from "@/src/components/ads/Products";
+import { products } from "@/src/interfaces";
 import type { Metadata } from "next";
 
 
@@ -7,10 +9,8 @@ export const metadata: Metadata = {
     keywords: ["semillas", "e-commerce", "plantas", "jardineria"],
 };
 
-export default function AboutPage() {
+export default function ProductPage() {
     return (
-        <main className="flex flex-col items-center">
-            <span>About Page</span>
-        </main>
+        <Products label="" list={products} />
     )
 }

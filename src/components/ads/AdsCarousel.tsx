@@ -7,9 +7,10 @@ export const AdsCarousel = () => {
             <div className={`row-span-2  relative min-h-[200px] md:min-h-[200px] flex items-center justify-center  overflow-hidden`}
             >
                 <Image src={"/resources/images/frame.png"} objectFit="contain" alt="Imagen de semilla"
-                    layout="responsive"
-                    width={500}
-                    height={500}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                    // width={500}
+                    // height={500}
                     className="rounded-md object-contain"
                 ></Image>
             </div>

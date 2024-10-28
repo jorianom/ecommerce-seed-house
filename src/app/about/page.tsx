@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AboutComponent } from "@/src/components/about/AboutComponent";
 
 
 export const metadata: Metadata = {
@@ -9,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
     return (
-        <main className="flex flex-col items-center">
-            <span>Products</span>
+        <main className="min-h-screen my-2 max-w-md sm:max-w-5xl mx-auto px-5 md:px-0 text-center md:text-left">
+            <AboutComponent />
         </main>
     )
 }
