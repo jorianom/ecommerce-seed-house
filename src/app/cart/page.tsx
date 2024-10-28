@@ -5,13 +5,11 @@ import style from "@/src//components/styles/cart.module.css";
 
 export const Cart = () => {
     return (
-        <>
-            <h2 className="text-2xl font-bold text-left m-4">Tu Carrito </h2>
-            <hr className="bg-primary h-px" />
+        <main>
             {/* <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center"> */}
             <CartProduct />
             {/* </div> */}
-        </>
+        </main>
     )
 }
 
