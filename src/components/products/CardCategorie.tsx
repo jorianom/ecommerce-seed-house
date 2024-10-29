@@ -90,21 +90,19 @@ export const CardCategorie = ({ item }: CardCategorieProps) => {
     return (
         <>
             <h2 className="text-2xl font-bold text-left m-4">Categorias </h2>
-            <div
-                className="relative group w-full overflow-hidden"
-            >
-                <div className="flex px-2 gap-2 overflow-x-auto scroll-smooth scrollbar-hide pb-2"
+            <div className="grid grid-cols-1 relative max-w-full w-full overflow-hidden">
+                <div className="flex px-2 gap-2 overflow-x-auto scroll-smooth scrollbar-hide pb-2 max-w-full w-full"
                     ref={scrollContainerRef}
                     id="categories"
                 >
-                    <button
+                    {/* <button
                         className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hidden md:block"
                         onClick={scrollLeft}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
                         ←
-                    </button>
+                    </button> */}
                     {
                         item.map((categorie) => (
                             <div key={categorie.id} className="flex flex-col bg-white rounded-lg shadow-md w-full max-w-36 xl:max-w-52 mx-auto shrink-0">
@@ -126,14 +124,14 @@ export const CardCategorie = ({ item }: CardCategorieProps) => {
                         ))
                     }
                 </div>
-                <button
+                {/* <button
                     className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hidden md:block"
                     onClick={scrollRight}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
                     →
-                </button>
+                </button> */}
             </div >
         </>
     )

@@ -21,9 +21,10 @@ export const Sidebar = () => {
             }
             {
                 isOpen && (
-                    <div
+                    <button
                         onClick={closeSidebar}
                         className="fade-in fixed top-0 left-0 w-screen h-screen z-10 backdrop-filter backdrop-blur-sm"
+                        aria-label="Close sidebar"
                     />
 
                 )
@@ -31,23 +32,15 @@ export const Sidebar = () => {
             <nav className={`fixed right-0 top-0 w-4/5 h-screen bg-white z-20 shadow-2xl transform transition-all duration-300 ${!isOpen ? 'translate-x-full' : ''}`}>
                 <div className="flex items-center bg-primary px-5 py-5 text-white">
                     <span className="antialiased ">La casa de las semillas</span>
-                    {/* <IoClose size={50}
-                        onClick={() => closeSidebar()}
-                        className=""
-                    /> */}
                 </div>
-                {/* <div className="m-6 absolute top-0 left-0 cursor-pointer">
-                    <span className="">Menu</span>
-                </div> */}
                 <IoClose size={40}
                     onClick={() => closeSidebar()}
                     className="absolute top-0 right-0 mx-2 cursor-pointer text-white"
                 />
-                {/* <div className="mt-10"></div> */}
-                {/* <div className="w-full h-px bg-primary my-10" /> */}
                 <div className="p-5">
                     <Link
-                        href="/"
+                        href="/products"
+                        onClick={() => closeSidebar()}
                         className="flex items-center mt-5 p-2 hover:bg-gray-100 rounded transition-all"
                     >
                         <FaBoxes size={30} />
@@ -55,7 +48,8 @@ export const Sidebar = () => {
                     </Link>
                     <div className="w-full h-px bg-primary" />
                     <Link
-                        href="/"
+                        href="/about"
+                        onClick={() => closeSidebar()}
                         className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
                     >
                         <MdModeComment size={30} />

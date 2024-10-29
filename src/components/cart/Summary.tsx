@@ -8,12 +8,10 @@ interface ItemsSummaryProps {
 const ItemsSummary = ({ label, amount }: ItemsSummaryProps) => {
 
     return (
-        <>
-            <div className="flex justify-between items-center py-2">
-                <span className="text-lg">{label}</span>
-                <span className="text-lg font-bold">$ {formattedNumber(amount, 1)}</span>
-            </div>
-        </>
+        <div className="flex justify-between items-center py-2">
+            <span className="text-lg">{label}</span>
+            <span className="text-lg font-bold">$ {formattedNumber(amount, 1)}</span>
+        </div>
     )
 
 }
@@ -42,7 +40,7 @@ export const Summary = ({ total }: SummaryProps) => {
     ]
 
     return (
-        <div className="bg-softprimary shadow-lg rounded-lg p-6 mx-5 my-4 sm:my:0 w-full sm:w-5/6 flex-shrink-0">
+        <div className="bg-softprimary shadow-lg rounded-lg p-6 mx-5 my-4 sm:my:0 w-full md:w-5/6 flex-shrink-0">
             <h2 className="text-2xl font-bold mb-4">Resumen de Pedido</h2>
             <div className="divide-y divide-gray-200">
                 {

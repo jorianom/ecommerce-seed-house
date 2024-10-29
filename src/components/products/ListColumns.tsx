@@ -1,5 +1,7 @@
+'use client'
 import Link from 'next/link';
 import style from "../styles/navbar.module.css";
+import { usePathname } from 'next/navigation';
 
 interface Item {
     href: string;
@@ -14,6 +16,8 @@ interface ColumnListProps {
 
 
 export const ListColumns = ({ items, n }: ColumnListProps) => {
+
+    const path = usePathname();
     const splitIntoColumns = (arr: Item[], n: number) => {
         const columns = [];
         for (let i = 0; i < arr.length; i += n) {
@@ -29,7 +33,7 @@ export const ListColumns = ({ items, n }: ColumnListProps) => {
                 <ul key={column[0].href} className="flex flex-col">
                     {column.map((item) => (
                         <li key={item.href} className="py-1">
-                            <Link href={`/products/${item.slug}`} className={`px-1 ${style.linkHover}`}>
+                            <Link href={`/products/${item.slug}`} className={`px-1 ${style.linkHover} ${item.href + '/' + item.slug == path ? ' bg-primary text-white font-bold rounded-md' : ''}`}>
                                 {item.label}
                             </Link>
                         </li>
