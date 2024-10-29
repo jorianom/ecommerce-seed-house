@@ -68,25 +68,25 @@ export const CardCategorie = ({ item }: CardCategorieProps) => {
     const handleMouseLeave = () => {
         setIsPaused(false);
     };
-    const scrollLeft = () => {
-        const categories = document.getElementById('categories');
-        if (categories) {
-            categories.scrollBy({
-                left: -300,
-                behavior: 'smooth',
-            });
-        }
-    };
+    // const scrollLeft = () => {
+    //     const categories = document.getElementById('categories');
+    //     if (categories) {
+    //         categories.scrollBy({
+    //             left: -300,
+    //             behavior: 'smooth',
+    //         });
+    //     }
+    // };
 
-    const scrollRight = () => {
-        const categories = document.getElementById('categories');
-        if (categories) {
-            categories.scrollBy({
-                left: 300,
-                behavior: 'smooth',
-            });
-        }
-    };
+    // const scrollRight = () => {
+    //     const categories = document.getElementById('categories');
+    //     if (categories) {
+    //         categories.scrollBy({
+    //             left: 300,
+    //             behavior: 'smooth',
+    //         });
+    //     }
+    // };
     return (
         <>
             <h2 className="text-2xl font-bold text-left m-4">Categorias </h2>

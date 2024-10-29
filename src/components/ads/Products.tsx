@@ -1,7 +1,6 @@
 // import Image from "next/image"
-import { categories, Product } from "@/src/interfaces"
+import { Product } from "@/src/interfaces"
 import { CardProduct } from "../products/CardProduct"
-import { CardCategorie } from "../products/CardCategorie"
 
 
 interface ProductsProps {
