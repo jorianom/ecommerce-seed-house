@@ -9,8 +9,8 @@ interface CardProductProps {
 
 export const CardProduct = ({ item }: CardProductProps) => {
   return (
-    <div className="flex flex-col w-full bg-white shadow-md rounded-2xl">
-      <div className="aspect-square w-full rounded-2xl lg:aspect-none group-hover:opacity-75 relative overflow-hidden ">
+    <div className="flex flex-col w-full bg-white shadow-md rounded-2xl dark:text-black max-h-80 sm:max-h-fit">
+      <div className="aspect-square w-full rounded-2xl lg:aspect-none group-hover:opacity-75 relative overflow-hidden">
         <Image
           src={item.image}
           alt={item.alt}
@@ -26,13 +26,12 @@ export const CardProduct = ({ item }: CardProductProps) => {
             {item.titleProduct}
           </span>
         </div>
-        <div className="flex flex-col lg:flex-row mt-2 lg:space-x-2 w-full max-w-lg mx-auto">
+        <div className="flex flex-col lg:flex-row mt-2 lg:space-x-1 w-full max-w-lg mx-auto">
           <div className="relative flex justify-center items-center w-full">
-            <span className="text-lg md:text-2xl font-bold lg:text-left text-gray-800">${formattedNumber(item.price, 0)}</span>
+            <span className="text-md md:text-xl font-bold lg:text-left text-gray-800">${formattedNumber(item.price, 0)}</span>
             {
-              // <span className="text-sm/3 font-bold text-gray-500 line-through lg:text-left">{item.discount}</span>
               item.discount && (
-                <span className="ml-1 bg-danger text-white px-2 rounded-full text-sm md:text-base">
+                <span className="ml-0.5 sm:ml-1 bg-danger text-white px-2 rounded-full text-sm md:text-base">
                   {item.discount ? item.discount : "0%"}
                 </span>
               )

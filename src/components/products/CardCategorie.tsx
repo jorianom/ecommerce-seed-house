@@ -105,7 +105,7 @@ export const CardCategorie = ({ item }: CardCategorieProps) => {
                     </button> */}
                     {
                         item.map((categorie) => (
-                            <div key={categorie.id} className="flex flex-col bg-white rounded-lg shadow-md w-full max-w-36 xl:max-w-52 mx-auto shrink-0">
+                            <div key={categorie.id} className="flex flex-col bg-white rounded-xl shadow-md w-full max-w-36 xl:max-w-52 mx-auto shrink-0">
                                 <Link href={`/products/${categorie.slug}`}>
                                     <button className="w-full focus:outline-none"
                                         onMouseEnter={handleMouseEnter}

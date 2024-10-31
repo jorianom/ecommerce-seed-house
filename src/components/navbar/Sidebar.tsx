@@ -29,7 +29,7 @@ export const Sidebar = () => {
 
                 )
             }
-            <nav className={`fixed right-0 top-0 w-4/5 h-screen bg-white z-20 shadow-2xl transform transition-all duration-300 ${!isOpen ? 'translate-x-full' : ''}`}>
+            <nav className={`fixed right-0 top-0 w-4/5 h-screen bg-white dark:text-black z-20 shadow-2xl transform transition-all duration-300 ${!isOpen ? 'translate-x-full' : ''}`}>
                 <div className="flex items-center bg-primary px-5 py-5 text-white">
                     <span className="antialiased ">La casa de las semillas</span>
                 </div>

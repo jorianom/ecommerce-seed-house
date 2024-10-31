@@ -40,9 +40,9 @@ export const Summary = ({ total }: SummaryProps) => {
     ]
 
     return (
-        <div className="bg-softprimary shadow-lg rounded-lg p-6 mx-5 my-4 sm:my:0 w-full md:w-5/6 flex-shrink-0">
+        <div className="bg-softprimary shadow-lg rounded-lg p-6 mx-5 my-4 sm:my:0 w-full md:w-5/6 flex-shrink-0 dark:text-black">
             <h2 className="text-2xl font-bold mb-4">Resumen de Pedido</h2>
-            <div className="divide-y divide-gray-200">
+            <div className="divide-y divide-primary ">
                 {
                     items.map((item) => (
                         <ItemsSummary key={item.label} label={item.label} amount={item.amount} />
