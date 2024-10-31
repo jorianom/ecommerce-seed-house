@@ -6,6 +6,7 @@ import Navbar from "@/src/components/navbar/Navbar";
 import { titleFont } from "../fonts/fonts";
 import { Footer } from "../components/footer/Footer";
 import { Sidebar } from "../components/navbar/Sidebar";
+import SocialButtons from "../components/ui/SocialButtons";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -31,6 +32,8 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
           <Navbar />
           <Sidebar />
           {children}
+
+          <SocialButtons />
           <Footer />
         </div>
       </body>

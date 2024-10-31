@@ -1,4 +1,4 @@
-import { Products } from "@/src/components/ads/Products";
+import { Products } from "@/src/components/products/Products";
 import { CardCategorie } from "../components/products/CardCategorie";
 import { categories, products } from "../interfaces";
 

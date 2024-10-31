@@ -19,7 +19,7 @@ export const CardCategorie = ({ item }: CardCategorieProps) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [isPaused, setIsPaused] = useState(false);
     const [scrollDirection, setScrollDirection] = useState(1);
-    const isMediumScreen = () => window.innerWidth >= 768;
+    const isMediumScreen = () => window.innerWidth >= 0;
 
     useEffect(() => {
         let animationFrameId: number;
@@ -47,7 +47,7 @@ export const CardCategorie = ({ item }: CardCategorieProps) => {
         }
 
         const handleResize = () => {
-            if (!isMediumScreen()) {
+            if (isMediumScreen()) {
                 cancelAnimationFrame(animationFrameId); // Detener animación en pantallas pequeñas
             } else {
                 animationFrameId = requestAnimationFrame(moveScroll); // Reiniciar animación si cambia a pantallas más grandes

@@ -1,4 +1,4 @@
-import { Products } from "@/src/components/ads/Products";
+import { Products } from "@/src/components/products/Products";
 import { products } from "@/src/interfaces";
 import type { Metadata } from "next";
 
