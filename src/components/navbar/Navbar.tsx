@@ -10,7 +10,7 @@ import { FaSeedling } from "react-icons/fa6";
 
 
 const navItems = [
-    { href: "/about", label: "¿Quienes Somos?" },
+    { href: "/about", label: "Sobre Nosotros" },
     { href: "/products", label: "Productos" },
     { href: "/contact", label: "Contacto" },
 ]

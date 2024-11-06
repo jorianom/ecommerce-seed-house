@@ -21,7 +21,7 @@ const items = [
 
 export const NavbarCategories = () => {
     return (
-        <div className='flex flex-col md:flex-row lg:flex-row place-content-around p-4 bg-emerald-50 text-left items-center'>
+        <div className='flex flex-col md:flex-row lg:flex-row place-content-around p-4 bg-emerald-50 dark:bg-softprimary text-left items-center dark:text-black'>
             <div className='flex space-x-4'>
                 <ListColumns items={items} n={3} />
             </div>

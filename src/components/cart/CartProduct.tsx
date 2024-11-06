@@ -8,6 +8,7 @@ import { RiAddFill, RiDeleteBin7Line } from "react-icons/ri"
 import style from "@/src//components/styles/cart.module.css";
 import { Summary } from "./Summary"
 import { formattedNumber } from '../../utils/format';
+import CheckoutModal from "./CheckoutModal"
 
 export const CartProduct = () => {
     const cart = useCartStore((state) => state.cart)
@@ -15,6 +16,16 @@ export const CartProduct = () => {
     const deleteItem = useCartStore((state) => state.deleteItem)
     const totalPrice = useCartStore((state) => state.getTotalPrice())
     const [loaded, setLoaded] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleOpenModal = () => setIsModalOpen(true);
+    const handleCloseModal = () => setIsModalOpen(false);
+
+    const handleFormSubmit = (e: any) => {
+        e.preventDefault();
+        console.log("Formulario enviado");
+        handleCloseModal();
+    };
 
     const handleUpdateQuantity = (item: CartItem, quantity: number) => {
         if (item.quantity + quantity < 1) {
@@ -84,9 +95,10 @@ export const CartProduct = () => {
                     ))}
                 </div>
                 <div className="flex items-center justify-center w-full px-2 sm:px-0">
-                    <Summary total={totalPrice} />
+                    <Summary total={totalPrice} handleOpenModal={handleOpenModal} />
                 </div>
             </div>
+            <CheckoutModal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleFormSubmit} />
         </div>
     )
 }

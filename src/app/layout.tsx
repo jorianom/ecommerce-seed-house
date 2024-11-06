@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="es">
-      <body className={`${titleFont.className} antialiased`}>
+      <body className={`${titleFont.className} antialiased dark:bg-gray-900`}>
         <div className="grid grid-rows-[auto_1fr_auto] min-h-dvh">
           <Navbar />
           <Sidebar />

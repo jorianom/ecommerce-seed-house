@@ -15,7 +15,7 @@ const ButtonSocial = ({ classname, url, icon: Icon, newPage = false }: ButtonSoc
         href={url}
         target={!newPage ? "_blank" : ""}
         rel="noopener noreferrer"
-        className={`rounded-full p-5 m-1 text-white transition-colors duration-300 ease-in-out ${classname}`}
+        className={`rounded-full p-4 sm:p-5 m-1 text-white transition-colors duration-300 ease-in-out ${classname}`}
     >
         <Icon className="w-6 h-6" />
     </a>
@@ -25,28 +25,31 @@ const SocialButtons = () => {
     const [isAboveFooter, setIsAboveFooter] = useState(false);
     const [pxFooter, setPxFooter] = useState(0);
     const [link, setLink] = useState('');
+    const handleScroll = () => {
+        const footer = document.querySelector('#footer');
+        const footerPosition = footer ? footer.getBoundingClientRect().top : 0;
+        const windowHeight = window.innerHeight;
 
+        // Si el footer está en la pantalla, ajusta la posición de los botones
+        if (footerPosition <= windowHeight) { // umbral de 100px antes de alcanzarlo
+            setPxFooter(windowHeight - footerPosition);
+            setIsAboveFooter(true);
+        } else {
+            setIsAboveFooter(false);
+        }
+    };
     useEffect(() => {
         const isMobile = /Mobi|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
         setLink(isMobile
             ? "https://wa.me/573107287261?text=Hola,%20me%20puedes%20brindar%20información"
             : "https://web.whatsapp.com/send?phone=573107287261&text=Hola,%20me%20puedes%20brindar%20información");
-
-        const handleScroll = () => {
-            const footer = document.querySelector('#footer');
-            const footerPosition = footer ? footer.getBoundingClientRect().top : 0;
-            const windowHeight = window.innerHeight;
-
-            // Si el footer está en la pantalla, ajusta la posición de los botones
-            if (footerPosition <= windowHeight) { // umbral de 100px antes de alcanzarlo
-                setPxFooter(windowHeight - footerPosition);
-                setIsAboveFooter(true);
-            } else {
-                setIsAboveFooter(false);
-            }
-        };
+        handleScroll();
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleScroll);
+        }
     }, []);
 
     return (
@@ -57,9 +60,6 @@ const SocialButtons = () => {
             <ButtonSocial classname="bg-green-500 text-white dark:bg-green-400 
                         hover:bg-green-600 dark:hover:bg-green-500 shadow-md hover:shadow-lg transition-shadow duration-300"
                 url={`${link}`} icon={AiOutlineWhatsApp} />
-            {/* <ButtonSocial classname="bg-gray-800 hover:bg-gray-900" url="https://www.twitter.com" icon={FaXTwitter} />
-            <ButtonSocial classname="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 hover:opacity-90" url="https://www.instagram.com" icon={FaInstagram} />
-            <ButtonSocial classname="bg-gray-200 hover:bg-gray-300 text-gray-800" url="#home" newPage={true} icon={IoIosArrowUp} /> */}
         </div >
     );
 };

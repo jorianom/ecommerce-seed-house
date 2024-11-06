@@ -17,9 +17,10 @@ const ItemsSummary = ({ label, amount }: ItemsSummaryProps) => {
 }
 interface SummaryProps {
     total: number;
+    handleOpenModal: () => void;
 }
 
-export const Summary = ({ total }: SummaryProps) => {
+export const Summary = ({ total, handleOpenModal }: SummaryProps) => {
     const shippingCost = 100
     const tax = total * 0.19
     total = total + shippingCost
@@ -54,7 +55,7 @@ export const Summary = ({ total }: SummaryProps) => {
                 </div>
             </div>
             <div className="mt-6 text-center">
-                <button className="w-2/5 bg-primary hover:bg-hardprimary text-white font-semibold py-2 rounded-md">
+                <button onClick={handleOpenModal} className="w-2/5 bg-primary hover:bg-hardprimary text-white font-semibold py-2 rounded-md">
                     Pagar
                 </button>
             </div>
