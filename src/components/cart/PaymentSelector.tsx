@@ -1,7 +1,6 @@
+import Image from 'next/image';
 import { useState } from 'react';
-import { MdOutlinePayment } from 'react-icons/md';
 import { PiCreditCardThin } from 'react-icons/pi';
-import { TbCreditCard } from 'react-icons/tb';
 
 const PaymentMethodSelector = () => {
     const [selectedMethod, setSelectedMethod] = useState('');
@@ -30,9 +29,11 @@ const PaymentMethodSelector = () => {
                 >
                     {!method.logo ?
                         <div className="w-17 h-16">
-                            <img
+                            <Image
                                 src={method.imageSrc}
                                 alt={method.label}
+                                width={100}
+                                height={100}
                                 className="w-full h-full object-contain"
                             />
                         </div>

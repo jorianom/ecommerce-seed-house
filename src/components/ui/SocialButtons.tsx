@@ -53,7 +53,7 @@ const SocialButtons = () => {
     }, []);
 
     return (
-        <div className={`fixed right-4 flex flex-col space-y-2 transition-all duration-500 ease-[cubic-bezier(0.4, 0, 0.2, 1)]`}
+        <div className={`fixed right-4 flex flex-col space-y-2 transition-all duration-500 ease-[cubic-bezier(0.4, 0, 0.2, 1)] bottom-1`}
             style={{
                 bottom: isAboveFooter ? pxFooter : '1rem'
             }}>
