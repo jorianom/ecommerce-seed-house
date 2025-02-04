@@ -1,11 +1,11 @@
 import { Products } from "@/src/components/products/Products";
-import { CardCategorie } from "../components/products/CardCategorie";
-import { categories, products } from "../interfaces";
+// import { CardCategorie } from "../components/products/CardCategorie";
+import { products } from "../interfaces";
 
 export default function Home() {
   return (
     <main className="bg-white dark:bg-gray-900">
-      <CardCategorie item={categories} />
+      {/* <CardCategorie item={categories} /> */}
       <Products label="Productos Populares" list={products} />
     </main>
   );

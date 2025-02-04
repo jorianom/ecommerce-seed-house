@@ -39,7 +39,7 @@ export const CardProduct = ({ item }: CardProductProps) => {
           </div>
           <CartButton item={item} />
         </div>
-
+        <a href={`/products/${item.slug}/${item.id}`} className="btn">View Product</a>
         <span className="hidden md:block text-sm/3 mt-4 ">
           Disponible 2 días después de tu compra
         </span>

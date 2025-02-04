@@ -30,9 +30,9 @@ export const ListColumns = ({ items, n }: ColumnListProps) => {
     return (
         <>
             {columns.map((column) => (
-                <ul key={column[0].href} className="flex flex-col">
+                <ul key={column[0].href+column[0].label} className="flex flex-col">
                     {column.map((item) => (
-                        <li key={item.href} className="py-1">
+                        <li key={item.href+item.label} className="py-1">
                             <Link href={`/products/${item.slug}`} className={`px-1 ${style.linkHover} ${item.href + '/' + item.slug == path ? ' bg-primary text-white font-bold rounded-md' : ''}`}>
                                 {item.label}
                             </Link>

@@ -1,4 +1,3 @@
-import { Products } from '@/src/components/products/Products'
 import { products } from '@/src/interfaces';
 import { notFound } from 'next/navigation';
 
@@ -10,13 +9,13 @@ interface PageProps {
 
 const page = ({ params }: PageProps) => {
     const { id } = params;
-    const productsFilter = products.filter(product => product.slug === id);
-
-    if (productsFilter.length === 0) {
+    const productsFilter = products.find(product => product.id == Number(id)) ?? null;
+    // console.log("productsFilter ", productsFilter);
+    if (!productsFilter) {
         notFound();
     }
     return (
-        <Products label="" list={productsFilter} />
+        <p> Product {JSON.stringify(productsFilter)}</p>
 
     )
 }

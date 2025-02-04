@@ -2,6 +2,7 @@
 import { IconType } from 'react-icons';
 import { useEffect, useState } from 'react';
 import { AiOutlineWhatsApp } from 'react-icons/ai';
+import { usePathname } from 'next/navigation';
 
 interface ButtonSocialProps {
     classname: string;
@@ -25,19 +26,8 @@ const SocialButtons = () => {
     const [isAboveFooter, setIsAboveFooter] = useState(false);
     const [pxFooter, setPxFooter] = useState(0);
     const [link, setLink] = useState('');
-    const handleScroll = () => {
-        const footer = document.querySelector('#footer');
-        const footerPosition = footer ? footer.getBoundingClientRect().top : 0;
-        const windowHeight = window.innerHeight;
-
-        // Si el footer está en la pantalla, ajusta la posición de los botones
-        if (footerPosition <= windowHeight) { // umbral de 100px antes de alcanzarlo
-            setPxFooter(windowHeight - footerPosition);
-            setIsAboveFooter(true);
-        } else {
-            setIsAboveFooter(false);
-        }
-    };
+    const path = usePathname();
+    const excludePaths = ["/cart", "/contact"];
     useEffect(() => {
         const isMobile = /Mobi|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
         setLink(isMobile
@@ -51,6 +41,21 @@ const SocialButtons = () => {
             window.removeEventListener('resize', handleScroll);
         }
     }, []);
+
+    if (excludePaths.includes(path)) return null;
+    const handleScroll = () => {
+        const footer = document.querySelector('#footer');
+        const footerPosition = footer ? footer.getBoundingClientRect().top : 0;
+        const windowHeight = window.innerHeight;
+
+        // Si el footer está en la pantalla, ajusta la posición de los botones
+        if (footerPosition <= windowHeight) { // umbral de 100px antes de alcanzarlo
+            setPxFooter(windowHeight - footerPosition);
+            setIsAboveFooter(true);
+        } else {
+            setIsAboveFooter(false);
+        }
+    };
 
     return (
         <div className={`fixed right-4 flex flex-col space-y-2 transition-all duration-500 ease-[cubic-bezier(0.4, 0, 0.2, 1)] bottom-1`}

@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { ListColumns } from './ListColumns';
 
 const navOpt = [
-    { id: 1, href: "/products", label: "Ofertas", className: "bg-danger hover:bg-red-600 text-white py-2 px-4 rounded-full  text-center" },
-    { id: 2, href: "/products", label: "Lo mas vendido", className: "bg-primary hover:bg-hardprimary text-white py-2 px-4 rounded-full  text-center" },
-    { id: 3, href: "/products", label: "Lo mas buscado", className: "bg-warning hover:bg-orange-600 text-white py-2 px-4 rounded-full  text-center" }
+    { id: 1, href: "/products/1", label: "Ofertas", className: "bg-danger hover:bg-red-600 text-white py-2 px-4 rounded-full  text-center" },
+    { id: 2, href: "/products2", label: "Lo mas vendido", className: "bg-primary hover:bg-hardprimary text-white py-2 px-4 rounded-full  text-center" },
+    { id: 3, href: "/products2", label: "Lo mas buscado", className: "bg-warning hover:bg-orange-600 text-white py-2 px-4 rounded-full  text-center" }
 ]
 
 const items = [

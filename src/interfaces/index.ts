@@ -84,7 +84,7 @@ export const products = [
         discount: "-30%"
     },
     {
-        id: 6,
+        id: 7,
         alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
         name: "Árboles",
         image: "/resources/images/flor.jpg",

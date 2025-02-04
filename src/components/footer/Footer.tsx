@@ -1,5 +1,8 @@
 
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa6"
+import { FaInstagram, FaWhatsapp } from "react-icons/fa6"
+import { SlSocialFacebook } from "react-icons/sl";
+
+
 
 export const Footer = () => {
     return (
@@ -33,13 +36,13 @@ export const Footer = () => {
                     </ul>
                 </div>
                 <div className="flex space-x-6 mb-4 pt-4 sm:mb-0 sm:pt-0">
-                    <a href="https://facebook.com" className="text-gray-400 hover:text-white">
-                        <FaFacebook className="h-6 w-6" fill="white" />
+                    <a href="https://facebook.com" className="">
+                        <SlSocialFacebook className="h-6 w-6" fill="white" />
                     </a>
-                    <a href="https://facebook.com" className="text-gray-400 hover:text-white">
+                    <a href="https://facebook.com" className="">
                         <FaInstagram className="h-6 w-6" fill="white" />
                     </a>
-                    <a href="https://twitter.com" className="text-gray-400 hover:text-white">
+                    <a href="https://twitter.com" className="">
                         <FaWhatsapp className="h-6 w-6" fill="white" />
                     </a>
                 </div>

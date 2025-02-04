@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/src/components/navbar/Navbar";
 
@@ -25,6 +24,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+
   return (
     <html lang="es">
       <body className={`${titleFont.className} antialiased dark:bg-gray-900`}>
