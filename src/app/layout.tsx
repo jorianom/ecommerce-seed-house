@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/src/components/navbar/Navbar";
 
 import { titleFont } from "../fonts/fonts";
 import { Footer } from "../components/footer/Footer";
 import { Sidebar } from "../components/navbar/Sidebar";
+import SocialButtons from "../components/ui/SocialButtons";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -24,13 +24,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+
   return (
     <html lang="es">
-      <body className={`${titleFont.className} antialiased`}>
+      <body className={`${titleFont.className} antialiased dark:bg-gray-900`}>
         <div className="grid grid-rows-[auto_1fr_auto] min-h-dvh">
           <Navbar />
           <Sidebar />
           {children}
+          <SocialButtons />
           <Footer />
         </div>
       </body>

@@ -19,7 +19,7 @@ export const CardCategorie = ({ item }: CardCategorieProps) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [isPaused, setIsPaused] = useState(false);
     const [scrollDirection, setScrollDirection] = useState(1);
-    const isMediumScreen = () => window.innerWidth >= 768;
+    const isMediumScreen = () => window.innerWidth >= 0;
 
     useEffect(() => {
         let animationFrameId: number;
@@ -47,7 +47,7 @@ export const CardCategorie = ({ item }: CardCategorieProps) => {
         }
 
         const handleResize = () => {
-            if (!isMediumScreen()) {
+            if (isMediumScreen()) {
                 cancelAnimationFrame(animationFrameId); // Detener animación en pantallas pequeñas
             } else {
                 animationFrameId = requestAnimationFrame(moveScroll); // Reiniciar animación si cambia a pantallas más grandes
@@ -68,46 +68,44 @@ export const CardCategorie = ({ item }: CardCategorieProps) => {
     const handleMouseLeave = () => {
         setIsPaused(false);
     };
-    const scrollLeft = () => {
-        const categories = document.getElementById('categories');
-        if (categories) {
-            categories.scrollBy({
-                left: -300,
-                behavior: 'smooth',
-            });
-        }
-    };
+    // const scrollLeft = () => {
+    //     const categories = document.getElementById('categories');
+    //     if (categories) {
+    //         categories.scrollBy({
+    //             left: -300,
+    //             behavior: 'smooth',
+    //         });
+    //     }
+    // };
 
-    const scrollRight = () => {
-        const categories = document.getElementById('categories');
-        if (categories) {
-            categories.scrollBy({
-                left: 300,
-                behavior: 'smooth',
-            });
-        }
-    };
+    // const scrollRight = () => {
+    //     const categories = document.getElementById('categories');
+    //     if (categories) {
+    //         categories.scrollBy({
+    //             left: 300,
+    //             behavior: 'smooth',
+    //         });
+    //     }
+    // };
     return (
         <>
             <h2 className="text-2xl font-bold text-left m-4">Categorias </h2>
-            <div
-                className="relative group w-full overflow-hidden"
-            >
-                <div className="flex px-2 gap-2 overflow-x-auto scroll-smooth scrollbar-hide pb-2"
+            <div className="grid grid-cols-1 relative max-w-full w-full overflow-hidden">
+                <div className="flex px-2 gap-2 overflow-x-auto scroll-smooth scrollbar-hide pb-2 max-w-full w-full"
                     ref={scrollContainerRef}
                     id="categories"
                 >
-                    <button
+                    {/* <button
                         className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hidden md:block"
                         onClick={scrollLeft}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
                         ←
-                    </button>
+                    </button> */}
                     {
                         item.map((categorie) => (
-                            <div key={categorie.id} className="flex flex-col bg-white rounded-lg shadow-md w-full max-w-36 xl:max-w-52 mx-auto shrink-0">
+                            <div key={categorie.id} className="flex flex-col bg-white rounded-xl shadow-md w-full max-w-36 xl:max-w-52 mx-auto shrink-0">
                                 <Link href={`/products/${categorie.slug}`}>
                                     <button className="w-full focus:outline-none"
                                         onMouseEnter={handleMouseEnter}
@@ -126,14 +124,14 @@ export const CardCategorie = ({ item }: CardCategorieProps) => {
                         ))
                     }
                 </div>
-                <button
+                {/* <button
                     className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hidden md:block"
                     onClick={scrollRight}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
                     →
-                </button>
+                </button> */}
             </div >
         </>
     )

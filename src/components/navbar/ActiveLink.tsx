@@ -13,8 +13,9 @@ interface ActiveLinkProps {
 export const ActiveLink = ({ href, label, isIcon = false }: ActiveLinkProps) => {
     const path = usePathname();
     return (
-        <Link href={href} className={`px-2 ${style.link} ${path == href ? `${style.linkActive}` : ""
-            } ${isIcon ? style.linkIcon : style.linkHover}`}>
+        <Link 
+            href={href} 
+            className={`px-2 ${style.link} ${path == href ? style.linkActive : ""} ${isIcon ? style.linkIcon : style.linkHover}`}>
             {label}
         </Link>
     )

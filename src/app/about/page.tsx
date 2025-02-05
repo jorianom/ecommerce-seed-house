@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen my-2 max-w-md sm:max-w-5xl mx-auto px-5 md:px-0 text-center md:text-left">
+        <main className="min-h-screen my-2 max-w-md md:max-w-5xl  mx-auto px-5 md:px-0 text-center md:text-left dark:text-black">
             <AboutComponent />
         </main>
     )

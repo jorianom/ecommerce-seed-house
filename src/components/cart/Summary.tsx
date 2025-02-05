@@ -8,20 +8,19 @@ interface ItemsSummaryProps {
 const ItemsSummary = ({ label, amount }: ItemsSummaryProps) => {
 
     return (
-        <>
-            <div className="flex justify-between items-center py-2">
-                <span className="text-lg">{label}</span>
-                <span className="text-lg font-bold">$ {formattedNumber(amount, 1)}</span>
-            </div>
-        </>
+        <div className="flex justify-between items-center py-2">
+            <span className="text-lg">{label}</span>
+            <span className="text-lg font-bold">$ {formattedNumber(amount, 1)}</span>
+        </div>
     )
 
 }
 interface SummaryProps {
     total: number;
+    handleOpenModal: () => void;
 }
 
-export const Summary = ({ total }: SummaryProps) => {
+export const Summary = ({ total, handleOpenModal }: SummaryProps) => {
     const shippingCost = 100
     const tax = total * 0.19
     total = total + shippingCost
@@ -42,9 +41,9 @@ export const Summary = ({ total }: SummaryProps) => {
     ]
 
     return (
-        <div className="bg-softprimary shadow-lg rounded-lg p-6 mx-5 my-4 sm:my:0 w-full sm:w-5/6 flex-shrink-0">
+        <div className="bg-softprimary shadow-lg rounded-lg p-6 mx-5 my-4 sm:my:0 w-full md:w-5/6 flex-shrink-0 dark:text-black">
             <h2 className="text-2xl font-bold mb-4">Resumen de Pedido</h2>
-            <div className="divide-y divide-gray-200">
+            <div className="divide-y divide-primary ">
                 {
                     items.map((item) => (
                         <ItemsSummary key={item.label} label={item.label} amount={item.amount} />
@@ -56,7 +55,7 @@ export const Summary = ({ total }: SummaryProps) => {
                 </div>
             </div>
             <div className="mt-6 text-center">
-                <button className="w-2/5 bg-primary hover:bg-hardprimary text-white font-semibold py-2 rounded-md">
+                <button onClick={handleOpenModal} className="w-2/5 bg-primary hover:bg-hardprimary text-white font-semibold py-2 rounded-md">
                     Pagar
                 </button>
             </div>

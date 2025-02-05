@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { ListColumns } from './ListColumns';
 
 const navOpt = [
-    { id: 1, href: "/products", label: "Ofertas", className: "bg-danger hover:bg-red-600 text-white py-2 px-4 rounded-full  text-center" },
-    { id: 2, href: "/products", label: "Lo mas vendido", className: "bg-primary hover:bg-hardprimary text-white py-2 px-4 rounded-full  text-center" },
-    { id: 3, href: "/products", label: "Lo mas buscado", className: "bg-warning hover:bg-orange-600 text-white py-2 px-4 rounded-full  text-center" }
+    { id: 1, href: "/products/1", label: "Ofertas", className: "bg-danger hover:bg-red-600 text-white py-2 px-4 rounded-full  text-center" },
+    { id: 2, href: "/products2", label: "Lo mas vendido", className: "bg-primary hover:bg-hardprimary text-white py-2 px-4 rounded-full  text-center" },
+    { id: 3, href: "/products2", label: "Lo mas buscado", className: "bg-warning hover:bg-orange-600 text-white py-2 px-4 rounded-full  text-center" }
 ]
 
 const items = [
@@ -21,7 +21,7 @@ const items = [
 
 export const NavbarCategories = () => {
     return (
-        <div className='flex flex-col md:flex-row lg:flex-row place-content-around p-4 bg-emerald-50 text-left items-center'>
+        <div className='flex flex-col md:flex-row lg:flex-row place-content-around p-4 bg-emerald-50 dark:bg-softprimary text-left items-center dark:text-black'>
             <div className='flex space-x-4'>
                 <ListColumns items={items} n={3} />
             </div>
