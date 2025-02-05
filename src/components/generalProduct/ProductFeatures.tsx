@@ -1,12 +1,14 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/16/solid'
 
+
+
 export default function ProductFeatures() {
   return (
-    <Disclosure as="div" className="w-full">
+    <Disclosure as="div" className="w-full" defaultOpen={true}>
       <div className='flex'>
-        <DisclosureButton className="w-full border-b pb-2 px-4 text-left font-bold">Descripcion del producto?</DisclosureButton>
-      <ChevronDownIcon className="size-5 fill-black/60" />
+        <DisclosureButton className="w-full border-b pb-2 px-4 text-left font-bold">Descripcion del producto</DisclosureButton>
+      <ChevronDownIcon className="size-5 fill-black/60 "/>
       </div>
       <div className="overflow-hidden py-2">
         <DisclosurePanel
