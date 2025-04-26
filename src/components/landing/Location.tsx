@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { FaSeedling } from "react-icons/fa6"
 
 export const Location = () => {

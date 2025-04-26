@@ -33,7 +33,7 @@ const getNavItems = (path: string) => {
 export default function Navbar() {
     const path = usePathname();
     const openSidebar = useUIStore(state => state.openSidebar);
-    let navItems = getNavItems(path);
+    const navItems = getNavItems(path);
 
     return (
         <nav className="flex px-5 py-5 justify-between items-center w-full bg-primary text-white">

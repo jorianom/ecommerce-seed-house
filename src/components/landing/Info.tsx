@@ -1,6 +1,5 @@
 import { FaShippingFast } from "react-icons/fa"
 import { FaRankingStar } from "react-icons/fa6"
-import { PiHandHeart } from "react-icons/pi"
 import { RiHandHeartFill } from "react-icons/ri"
 
 export const Info = () => {
