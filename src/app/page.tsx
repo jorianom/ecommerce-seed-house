@@ -1,12 +1,13 @@
-import { Products } from "@/src/components/products/Products";
-// import { CardCategorie } from "../components/products/CardCategorie";
-import { products } from "../interfaces";
+import { Hero } from "../components/landing/Hero";
+import { Info } from "../components/landing/Info";
+import { Location } from "../components/landing/Location";
 
 export default function Home() {
   return (
-    <main className="bg-white dark:bg-gray-900">
-      {/* <CardCategorie item={categories} /> */}
-      <Products label="Productos Populares" list={products} />
+    <main className="">
+      <Hero />
+      <Info />
+      <Location />
     </main>
   );
 }
