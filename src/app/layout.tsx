@@ -7,20 +7,10 @@ import { Footer } from "../components/footer/Footer";
 import { Sidebar } from "../components/navbar/Sidebar";
 import SocialButtons from "../components/ui/SocialButtons";
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
 
 export const metadata: Metadata = {
-  title: "e-commerce seeds",
-  description: "La casa de las semillas e-commerce",
+  title: "La casa de la semilla",
+  description: "La casa de las semillas La casa de la semilla",
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {

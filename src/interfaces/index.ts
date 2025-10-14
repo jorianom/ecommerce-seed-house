@@ -23,76 +23,80 @@ export interface Product {
 export const products = [
     {
         id: 1,
-        alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
+        alt: "Catálogo Fercon: semillas, fertilizantes, suelos sustrato, materas y más ",
         name: "Frutas",
-        image: "/resources/images/semilla.jpg",
-        titleProduct: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
+        image: "/resources/images/seed.jpg",
+        fileUrl: "/resources/pdfs/catalogo.pdf",
+        titleProduct: "Catálogo Fercon: semillas, fertilizantes, suelos sustrato, materas y más",
         price: 100000,
         slug: "semillas",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores commodi sequi itaque sed aut qui modi obcaecati dolore, cumque neque animi expedita est cupiditate, reiciendis necessitatibus non at accusamus praesentium."
+        description: "Catálogo Fercon: semillas, fertilizantes, suelos sustrato, materas y más"
     },
 
     {
         id: 2,
-        alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
+        alt: "Forrajes diseñados para climas cálidos, optimizados para la alimentación y productividad de los bovinos.",
         name: "Árboles",
-        image: "/resources/images/flor.jpg",
-        titleProduct: "Unas matas ahí",
+        image: "/resources/images/forraje.jpg",
+        fileUrl: "/resources/pdfs/forrajes.pdf",
+        titleProduct: "Forrajes diseñados para climas cálidos, optimizados para la alimentación y productividad de los bovinos.",
         price: 1000000,
         slug: "importado",
         discount: "-20%"
     },
     {
         id: 3,
-        alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
+        alt: "Portafolio de productos veterinarios para satisfacer las necesidades de salud y bienestar de tus animales.",
         name: "Árboles",
-        image: "/resources/images/flor.jpg",
-        titleProduct: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores commodi sequi itaque sed aut qui modi obcaecati dolore, cumque neque animi expedita est cupiditate, reiciendis necessitatibus non at accusamus praesentium.",
+        image: "/resources/images/cows.jpg",
+        fileUrl: "/resources/pdfs/veterinaria.pdf",
+        titleProduct: "Productos veterinarios para las necesidades de salud y bienestar de tus animales.",
         price: 100000,
         slug: "macetas",
         discount: "-20%"
     },
-    {
-        id: 4,
-        alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
-        name: "Frutas",
-        image: "/resources/images/semilla.jpg",
-        titleProduct: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
-        price: 100000,
-        slug: "jardineria",
-        discount: "-60%"
-    },
+    // {
+    //     id: 4,
+    //     alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
+    //     name: "Frutas",
+    //     image: "/resources/images/seed.jpg",
+    //     fileUrl: "/resources/pdfs/catalogo.pdf",
+    //     titleProduct: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
+    //     price: 100000,
+    //     slug: "jardineria",
+    //     discount: "-60%"
+    // },
 
-    {
-        id: 5,
-        alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
-        name: "Árboles",
-        image: "/resources/images/flor.jpg",
-        titleProduct: "Unas matas ahí",
-        price: 100000,
-        slug: "fertilizantes",
-        discount: "-10%"
-    },
-    {
-        id: 6,
-        alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
-        name: "Árboles",
-        image: "/resources/images/flor.jpg",
-        titleProduct: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores commodi sequi itaque sed aut qui modi obcaecati dolore, cumque neque animi expedita est cupiditate, reiciendis necessitatibus non at accusamus praesentium.",
-        price: 100000,
-        slug: "semillas",
-        discount: "-30%"
-    },
-    {
-        id: 7,
-        alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
-        name: "Árboles",
-        image: "/resources/images/flor.jpg",
-        titleProduct: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores commodi sequi itaque sed aut qui modi obcaecati dolore, cumque neque animi expedita est cupiditate, reiciendis necessitatibus non at accusamus praesentium.",
-        price: 100000,
-        slug: "semillas",
-        discount: "-30%"
-    }
+    // {
+    //     id: 5,
+    //     alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
+    //     name: "Árboles",
+    //     image: "/resources/images/flor.jpg",
+    //     titleProduct: "Unas matas ahí",
+    //     price: 100000,
+    //     slug: "fertilizantes",
+    //     discount: "-10%"
+    // },
+    // {
+    //     id: 6,
+    //     alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
+    //     name: "Árboles",
+    //     image: "/resources/images/flor.jpg",
+    //     titleProduct: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores commodi sequi itaque sed aut qui modi obcaecati dolore, cumque neque animi expedita est cupiditate, reiciendis necessitatibus non at accusamus praesentium.",
+    //     price: 100000,
+    //     slug: "semillas",
+    //     discount: "-30%"
+    // },
+    // {
+    //     id: 7,
+    //     alt: "Matera Decorativa Robert + Suculenta + Sustrato + Piedras",
+    //     name: "Árboles",
+    //     image: "/resources/images/flor.jpg",
+    //     titleProduct: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores commodi sequi itaque sed aut qui modi obcaecati dolore, cumque neque animi expedita est cupiditate, reiciendis necessitatibus non at accusamus praesentium.",
+    //     price: 100000,
+    //     slug: "semillas",
+    //     discount: "-30%"
+    // }
 ]
 
 export const categories = [{

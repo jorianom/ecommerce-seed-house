@@ -39,7 +39,7 @@ export const Sidebar = () => {
                 />
                 <div className="p-5">
                     <Link
-                        href="/products"
+                        href="/shop"
                         onClick={() => closeSidebar()}
                         className="flex items-center mt-5 p-2 hover:bg-gray-100 rounded transition-all"
                     >

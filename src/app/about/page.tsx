@@ -3,9 +3,9 @@ import { AboutComponent } from "@/src/components/about/AboutComponent";
 
 
 export const metadata: Metadata = {
-    title: "e-commerce about",
-    description: "Quienes somos La casa de las semillas e-commerce",
-    keywords: ["semillas", "e-commerce", "plantas", "jardineria"],
+    title: "La casa de la semilla about",
+    description: "Quienes somos La casa de las semillas La casa de la semilla",
+    keywords: ["semillas", "La casa de la semilla", "plantas", "jardineria"],
 };
 
 export default function AboutPage() {

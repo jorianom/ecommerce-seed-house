@@ -36,13 +36,13 @@ export const Footer = () => {
                     </ul>
                 </div>
                 <div className="flex space-x-6 mb-4 pt-4 sm:mb-0 sm:pt-0">
-                    <a href="https://facebook.com" className="">
+                    <a href="https://www.facebook.com/share/16FCYTkDRJ/" className="" target="_blank" rel="noopener noreferrer">
                         <SlSocialFacebook className="h-6 w-6" fill="white" />
                     </a>
-                    <a href="https://facebook.com" className="">
+                    <a href="https://www.facebook.com/share/16FCYTkDRJ/" className="" target="_blank" rel="noopener noreferrer">
                         <FaInstagram className="h-6 w-6" fill="white" />
                     </a>
-                    <a href="https://twitter.com" className="">
+                    <a href="https://wa.me/573107287261?text=Hola,%20me%20puedes%20brindar%20información" className="" target="_blank" rel="noopener noreferrer">
                         <FaWhatsapp className="h-6 w-6" fill="white" />
                     </a>
                 </div>

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="bg-white dark:bg-gray-900">
       {/* <CardCategorie item={categories} /> */}
-      <Products label="Productos Populares" list={products} />
+      <Products label="Nuestros Productos" list={products} />
     </main>
   );
 }
