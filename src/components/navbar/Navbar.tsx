@@ -1,13 +1,13 @@
 'use client'
 import Link from "next/link";
 import { ActiveLink } from "./ActiveLink";
-import { BsCart4, BsSearch } from "react-icons/bs";
+// import { BsCart4, BsSearch } from "react-icons/bs";
 import style from "../styles/navbar.module.css";
-import { IconLink } from "./IconLink";
+// import { IconLink } from "./IconLink";
 import { CiMenuFries } from "react-icons/ci";
 import { useUIStore } from "@/src/store/ui/ui";
 import { FaSeedling } from "react-icons/fa6";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 
 // const navIcons = [
 //     // { href: "/example", label: <BsSearch className={`iconL w-5 h-5 ${style.iconL}`} /> },
@@ -15,7 +15,7 @@ import { usePathname } from "next/navigation";
 //     // { href: "/", label: <CiMenuFries className={`iconL w-5 h-5 ${style.iconL}`} /> },
 // ]
 
-const getNavItems = (path: string) => {
+const getNavItems = () => {
     // if (path === "/") {
     //     return [
     //         { href: "/about", label: "Sobre Nosotros" },
@@ -31,9 +31,9 @@ const getNavItems = (path: string) => {
 };
 
 export default function Navbar() {
-    const path = usePathname();
+    // const path = usePathname();
     const openSidebar = useUIStore(state => state.openSidebar);
-    const navItems = getNavItems(path);
+    const navItems = getNavItems();
 
     return (
         <nav className="flex px-5 py-5 justify-between items-center w-full bg-primary text-white">
